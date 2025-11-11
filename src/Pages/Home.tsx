@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Clapperboard } from 'lucide-react';
 import { Search } from "lucide-react";
@@ -29,6 +29,7 @@ const Home: React.FC = () => {
   const [isMoviesAvailable, setIsMoviesAvailable] = useState<boolean>(false);
   const [erroOccured, setErrorOccured] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
+  const movieSectionRef = useRef<HTMLDivElement | null>(null);
 
   const handleRecommendationBtn = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -62,6 +63,12 @@ const Home: React.FC = () => {
       }
     }
   }
+
+  useEffect(()=>{
+    if (isMoviesAvailable && movieSectionRef.current) {
+      movieSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  },[isMoviesAvailable])
 
   return (
     <>
@@ -127,7 +134,7 @@ const Home: React.FC = () => {
               <PostersCarousal />
             </motion.div>
           </section>
-          {isMoviesAvailable && <section className="relative w-full max-h-screen flex flex-col items-center justify-center space-y-5 overflow-hidden py-10" id='result'>
+          {isMoviesAvailable && <section ref={movieSectionRef} className="relative w-full max-h-screen flex flex-col items-center justify-center space-y-5 overflow-hidden py-10" id='result'>
             <h1 className='text-center text-slate-50 font-noto text-4xl'>Top Movie Recommendations</h1>
             {loading ? (
               <div className='w-full h-full mt-5 flex flex-col gap-4 items-center justify-center'>
