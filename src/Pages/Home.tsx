@@ -149,7 +149,7 @@ const Home: React.FC = () => {
                     <p className='text-slate-300 font-noto text-base text-center'>{error?.description}</p>
                   </div>
                 ) : (
-                  movies.map((movie, index) => (
+                  movies && movies.map((movie, index) => (
                     <motion.div
                       key={movie.id}
                       initial={{ opacity: 0, y: 20 }}
