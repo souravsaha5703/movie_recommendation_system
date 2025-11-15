@@ -139,12 +139,12 @@ const Home: React.FC = () => {
             {loading ? (
               <div className='w-full h-full mt-5 flex flex-col gap-4 items-center justify-center'>
                 <Loader />
-                <span className='text-xl text-center font-noto text-slate-200'>Your recommendations loading!</span>
+                <span className='text-xl text-center font-noto text-slate-200'>Loading your recommendations!</span>
               </div>
             ) : (
               <div className="mt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                 {erroOccured ? (
-                  <div className='flex flex-col gap-2'>
+                  <div className='flex flex-col w-full items-center justify-center gap-2'>
                     <h3 className='text-slate-100 font-noto text-lg text-center'>{error?.title}</h3>
                     <p className='text-slate-300 font-noto text-base text-center'>{error?.description}</p>
                   </div>
