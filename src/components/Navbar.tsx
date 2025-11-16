@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
                             <Film className='text-slate-50' />
                             <Link to={'/'} target='' className='font-oswald font-bold text-slate-50 text-2xl cursor-pointer'>CineMatch</Link>
                         </div>
-                        <a target='_blank' href={"https://github.com/souravsaha5703/hear-medicine"}><Github className='text-slate-50 cursor-pointer' /></a>
+                        <a target='_blank' href={"https://github.com/souravsaha5703/movie_recommendation_system"}><Github className='text-slate-50 cursor-pointer' /></a>
                     </div>
                 </motion.nav>
             </header >
