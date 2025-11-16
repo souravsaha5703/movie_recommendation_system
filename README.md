@@ -34,6 +34,15 @@ npm install
 
 ```
 
+Create .env file in root directory and set values
+
+```env
+
+VITE_RAPID_API_KEY = ""
+VITE_LOCAL_API = "http://127.0.0.1:8000/api"
+
+```
+
 ▶️ Run the APP
 ------------------
 
