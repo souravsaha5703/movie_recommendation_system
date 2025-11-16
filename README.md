@@ -1,73 +1,64 @@
-# React + TypeScript + Vite
+🎬 Sentiment Analysis–Based Movie Recommendation System – Frontend
+=================================================================
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the React + TypeScript frontend for the Sentiment Analysis–Based Movie Recommendation System. This webapp communicates with the backend API to fetch movie metadata, analyze sentiments, and display refined recommendations to the user.
 
-Currently, two official plugins are available:
+💻 Backend
+----------
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+For backend part visit https://github.com/souravsaha5703/movie_recommendation_system_backend
 
-## React Compiler
+🖼️ Screenshots
+----------
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![Landing Page](https://res.cloudinary.com/dez9wcn3g/image/upload/v1763305578/Screenshot_2025-11-16_203309_mnptnm.png)
 
-## Expanding the ESLint configuration
+![Recommendations Pic](https://res.cloudinary.com/dez9wcn3g/image/upload/v1763305579/Screenshot_2025-11-16_203544_nd80zh.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 📥 Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Clone the repo:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+```bash
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+git clone https://github.com/souravsaha5703/movie_recommendation_system.git
+cd movie_recommendation_system
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Install Dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+npm install
+
 ```
+
+▶️ Run the APP
+------------------
+
+```bash
+
+npm run dev
+
+```
+
+🤝 Contributing
+---------------
+
+Contributions are welcome!
+
+1.  Fork the project
+    
+2.  Create a new branch
+    
+3.  Make your feature
+    
+4.  Push and open a Pull Request
+
+📬 Contact
+----------
+
+**Author:** Sourav Saha🔗 GitHub: [https://github.com/souravsaha5703](https://github.com/souravsaha5703)
+
+For queries, open an issue in the repository.
